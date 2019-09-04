@@ -10,9 +10,6 @@ import ua.in.sz.learn.cxfone.ws.Hello;
 
 import javax.xml.ws.BindingProvider;
 
-/**
- * https://github.com/code-not-found/jaxws-cxf/blob/master/jaxws-cxf-server-basic-authentication-server/src/test/java/com/codenotfound/soap/http/cxf/HelloWorldClientImplMock.java
- */
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
