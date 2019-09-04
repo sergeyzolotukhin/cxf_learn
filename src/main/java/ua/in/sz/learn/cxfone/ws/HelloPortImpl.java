@@ -21,3 +21,13 @@ public class HelloPortImpl implements Hello {
         }
     }
 }
+
+/*
+
+BindingQName={
+http://service.ws.sample/}HelloServiceSoapBinding,
+ServiceQName={
+http://service.ws.sample/}HelloService,
+QName={http://service.ws.sample/}HelloPort
+
+ */

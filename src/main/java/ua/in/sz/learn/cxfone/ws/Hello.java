@@ -17,5 +17,5 @@ public interface Hello {
     @ResponseWrapper(localName = "sayHelloResponse",
             targetNamespace = "http://service.ws.sample/",
             className = "sample.ws.service.SayHelloResponse")
-    String sayHello(@WebParam(name = "myname", targetNamespace = "") String myname);
+    String sayHello(@WebParam(name = "name", targetNamespace = "") String name);
 }

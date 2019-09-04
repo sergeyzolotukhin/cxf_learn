@@ -20,14 +20,15 @@ public class CxfOneApplicationTests {
     public void contextLoads() {
         JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
         jaxWsProxyFactoryBean.setServiceClass(Hello.class);
-        jaxWsProxyFactoryBean.setAddress("endpointAddress");
+        jaxWsProxyFactoryBean.setAddress("http://localhost:8080/Service/Hello");
 
         Hello  helloWorldClientProxy = (Hello) jaxWsProxyFactoryBean.create();
 
-        BindingProvider bindingProvider = (BindingProvider) helloWorldClientProxy;
-        bindingProvider.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "userName");
-        bindingProvider.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
+//        BindingProvider bindingProvider = (BindingProvider) helloWorldClientProxy;
+//        bindingProvider.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "userName");
+//        bindingProvider.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
 
         String greeting = helloWorldClientProxy.sayHello("person");
     }
 }
+
