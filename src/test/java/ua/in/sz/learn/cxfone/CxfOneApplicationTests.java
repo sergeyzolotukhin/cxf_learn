@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import ua.in.sz.learn.cxfone.ws.Hello;
 
 import javax.xml.ws.BindingProvider;
 
@@ -18,24 +19,15 @@ public class CxfOneApplicationTests {
     @Test
     public void contextLoads() {
         JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
-        jaxWsProxyFactoryBean.setServiceClass(HelloWorldPortType.class);
+        jaxWsProxyFactoryBean.setServiceClass(Hello.class);
         jaxWsProxyFactoryBean.setAddress("endpointAddress");
 
-        HelloWorldPortType  helloWorldClientProxy = (HelloWorldPortType) jaxWsProxyFactoryBean.create();
+        Hello  helloWorldClientProxy = (Hello) jaxWsProxyFactoryBean.create();
 
-        setBasicAuthentication("userName", "password");
-
-        Greeting greeting = helloWorldClientProxy.sayHello(person);
-
-    }
-
-    private void setBasicAuthentication(String userName, String password) {
-        // the BindingProvider provides access to the protocol binding and
-        // associated context objects for request/response message processing
         BindingProvider bindingProvider = (BindingProvider) helloWorldClientProxy;
-        // set the user name for basic authentication
-        bindingProvider.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, userName);
-        // set the password for basic authentication
-        bindingProvider.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, password);
+        bindingProvider.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "userName");
+        bindingProvider.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
+
+        String greeting = helloWorldClientProxy.sayHello("person");
     }
 }
