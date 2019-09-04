@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.apache.cxf:cxf-spring-boot-starter-jaxws:3.3.3'
     implementation group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version: '3.3.3'
     implementation group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxws', version: '3.3.3'
 
