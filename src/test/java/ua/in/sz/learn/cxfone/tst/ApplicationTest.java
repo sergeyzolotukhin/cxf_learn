@@ -1,4 +1,4 @@
-package ua.in.sz.learn.cxfone;
+package ua.in.sz.learn.cxfone.tst;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
