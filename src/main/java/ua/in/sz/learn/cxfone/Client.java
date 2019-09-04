@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.cxf.staxutils.StaxUtils;
 
 @Slf4j
-public class SampleWsApplicationClient {
+public class Client {
     public static void main(String[] args) throws Exception {
         String address = "http://localhost:8080/Service/Hello";
         String request = "<q0:sayHello xmlns:q0=\"http://service.ws.sample/\"><myname>Elan</myname></q0:sayHello>";

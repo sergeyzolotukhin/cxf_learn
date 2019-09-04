@@ -16,7 +16,7 @@ import javax.xml.ws.BindingProvider;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CxfOneApplicationTests {
+public class ApplicationTest {
 
     @Test
     public void contextLoads() {
