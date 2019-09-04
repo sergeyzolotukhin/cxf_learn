@@ -20,7 +20,7 @@ public class CxfOneApplicationTests {
     public void contextLoads() {
         JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
         jaxWsProxyFactoryBean.setServiceClass(Hello.class);
-        jaxWsProxyFactoryBean.setAddress("http://localhost:8080/Service/Hello");
+        jaxWsProxyFactoryBean.setAddress("http://localhost:8080/services/Hello");
 
         Hello  helloWorldClientProxy = (Hello) jaxWsProxyFactoryBean.create();
 
