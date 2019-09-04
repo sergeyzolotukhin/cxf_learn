@@ -16,8 +16,8 @@ import org.apache.cxf.staxutils.StaxUtils;
 @Slf4j
 public class Client {
     public static void main(String[] args) throws Exception {
-        String address = "http://localhost:8080/Service/Hello";
-        String request = "<q0:sayHello xmlns:q0=\"http://service.ws.sample/\"><myname>Elan</myname></q0:sayHello>";
+        String address = "http://localhost:8080/services/Hello";
+        String request = "<q0:sayHello xmlns:q0=\"http://service.ws.sample/\"><name>Elan</name></q0:sayHello>";
 
         StreamSource source = new StreamSource(new StringReader(request));
         Service service = Service.create(new URL(address + "?wsdl"),
