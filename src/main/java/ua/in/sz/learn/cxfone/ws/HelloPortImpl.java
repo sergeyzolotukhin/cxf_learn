@@ -7,7 +7,7 @@ import javax.jws.WebService;
 @Slf4j
 @WebService(serviceName = "HelloService", portName = "HelloPort",
         targetNamespace = "http://service.ws.sample/",
-        endpointInterface = "sample.ws.service.Hello")
+        endpointInterface = "ua.in.sz.learn.cxfone.ws.Hello")
 public class HelloPortImpl implements Hello {
 
     public String sayHello(String name) {
