@@ -8,8 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import ua.in.sz.learn.cxfone.ws.Hello;
 
-import javax.xml.ws.BindingProvider;
-
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -22,10 +20,6 @@ public class ApplicationTest {
         jaxWsProxyFactoryBean.setAddress("http://localhost:8080/services/Hello");
 
         Hello helloWorldClientProxy = (Hello) jaxWsProxyFactoryBean.create();
-
-//        BindingProvider bindingProvider = (BindingProvider) helloWorldClientProxy;
-//        bindingProvider.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "userName");
-//        bindingProvider.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
 
         String greeting = helloWorldClientProxy.sayHello("person");
         log.info("Response: {}", greeting);
